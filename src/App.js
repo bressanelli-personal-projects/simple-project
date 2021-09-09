@@ -33,13 +33,13 @@ function App() {
       return character.house !== firstCharacter.house;
     }); 
     
-    let secondCharacter = secondCharacterArray[sortCharacter(secondCharacterArray)]
+    let secondCharacter = secondCharacterArray[sortCharacter(secondCharacterArray)];
 
     let thirdCharacterArray = secondCharacterArray.filter((character) => {
       return character.house !== secondCharacter.house;
     });    
 
-    let thirdCharacter = thirdCharacterArray[sortCharacter(thirdCharacterArray)]
+    let thirdCharacter = thirdCharacterArray[sortCharacter(thirdCharacterArray)];
 
     setCardList([firstCharacter, secondCharacter, thirdCharacter]);
 

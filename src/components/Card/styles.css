@@ -42,7 +42,7 @@
 }
 
 .studentsImg {
-    width: 220px;
+    width: 230px;
     height: 250px;    
     border-radius: 20px; 
 
@@ -55,7 +55,7 @@
 }
 
 .charactersName {
-    font-size: 20px;
+    font-size: 22px;
     margin: 10px;
     text-shadow: 0px 0px 18px #000;
 }
