@@ -25,19 +25,23 @@ function App() {
     
     let sortIndex = sortCharacter(students);    
 
-    let firstCharacter = students.find((value) => {
-      return value === students[sortIndex];
+    let firstCharacter = students.find((character) => {
+      return character === students[sortIndex];
     });    
     
-    let secondCharacter = students.filter((value) => {
-      return value.house !== firstCharacter.house;
+    let secondCharacterArray = students.filter((character) => {
+      return character.house !== firstCharacter.house;
+    }); 
+    
+    let secondCharacter = secondCharacterArray[sortCharacter(secondCharacterArray)]
+
+    let thirdCharacterArray = secondCharacterArray.filter((character) => {
+      return character.house !== secondCharacter.house;
     });    
 
-    let thirdCharacter = secondCharacter.filter((value) => {
-      return value.house !== secondCharacter[0].house;
-    });    
+    let thirdCharacter = thirdCharacterArray[sortCharacter(thirdCharacterArray)]
 
-    setCardList([firstCharacter, secondCharacter[0], thirdCharacter[sortCharacter(thirdCharacter)]]);
+    setCardList([firstCharacter, secondCharacter, thirdCharacter]);
 
     setChangeButton(true);
   } 
