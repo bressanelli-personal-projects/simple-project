@@ -1,0 +1,21 @@
+html, body, div, figure, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;  
+}
+
+.App-header {  
+  padding: 30px;
+  background-color: #214181;
+  min-height: 100vh; 
+  font-size: calc(10px + 2vmin);  
+}
+
+.mainTitle, .mainSubTitle {
+  color: #fff;
+  text-shadow: 0px 0px 18px rgba(243,212,16,1);
+}
