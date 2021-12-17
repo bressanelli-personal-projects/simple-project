@@ -5,7 +5,7 @@ import ravenclaw  from './ravenclaw.png'
 import slytherin  from './slytherin.png'
 
 const Card = ({characters}) => {
-
+    
     return (
 
         <div className={

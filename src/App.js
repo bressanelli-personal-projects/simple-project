@@ -12,10 +12,17 @@ function App() {
   useEffect(() => {
     fetch("https://hp-api.herokuapp.com/api/characters/students")
     .then((response) => response.json())
-    .then((response) => setStudents(response))
+    .then((response) => {
+      let output = response.filter((item, index) => {
+        if(index < 11){
+          return item;
+        }
+        return null
+      })
+      setStudents(output)})
     .catch((err) => console.log(err));
   },[]);
-
+  
   
   const sortCharacter = (array) => {
     return Math.floor(Math.random() * array.length );
